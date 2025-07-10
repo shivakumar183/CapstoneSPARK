@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     environment {
-        PATH = "/Library/Frameworks/Python.framework/Versions/3.13/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+        PATH = "/Library/Frameworks/Python.framework/Versions/3.13/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
         PIPENV = "/Library/Frameworks/Python.framework/Versions/3.13/bin/pipenv"
         SSH = "/usr/bin/ssh"
+JAVA_HOME = "/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home"
     }
 
     stages {
