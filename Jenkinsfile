@@ -1,11 +1,8 @@
 pipeline {
     agent any
-    
-    environment {
-        // Add pipenv binary to the PATH
-        PATH = "/Library/Frameworks/Python.framework/Versions/3.13/bin:/usr/bin:$PATH"
 
-        // Optional: If your script needs pipenv/python explicitly
+    environment {
+        PATH = "/Library/Frameworks/Python.framework/Versions/3.13/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
         PIPENV = "/Library/Frameworks/Python.framework/Versions/3.13/bin/pipenv"
         SSH = "/usr/bin/ssh"
     }
