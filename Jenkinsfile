@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     environment {
-        PATH = "/Library/Frameworks/Python.framework/Versions/3.13/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
+        PATH = "${SPARK_HOME}/bin:${JAVA_HOME}/bin:/Library/Frameworks/Python.framework/Versions/3.13/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+	SPARK_HOME = "/Users/shivakumar/spark3/spark-3.5.5-bin-hadoop3"
         PIPENV = "/Library/Frameworks/Python.framework/Versions/3.13/bin/pipenv"
         SSH = "/usr/bin/ssh"
 	JAVA_HOME = "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home"
